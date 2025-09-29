@@ -12,14 +12,14 @@ O projeto aplica **teoria dos grafos** para extrair informações úteis da rede
 
 ### Construção do Grafo
 
-* [ ] Gerar um **grafo direcionado** a partir das mensagens, considerando remetente e destinatário(s).
-* [ ] Tornar o grafo **ponderado** pela frequência de envio de mensagens.
+* [X] Gerar um **grafo direcionado** a partir das mensagens, considerando remetente e destinatário(s).
+* [X] Tornar o grafo **ponderado** pela frequência de envio de mensagens.
 * [ ] Rotular o grafo com os **endereços de e-mail dos usuários**.
 
 ### Informações Gerais do Grafo
 
-* [ ] Calcular o **número de vértices**.
-* [ ] Calcular o **número de arestas**.
+* [X] Calcular o **número de vértices**.
+* [X] Calcular o **número de arestas**.
 * [ ] Identificar os **20 indivíduos com maior grau de saída** e seus valores.
 * [ ] Identificar os **20 indivíduos com maior grau de entrada** e seus valores.
 

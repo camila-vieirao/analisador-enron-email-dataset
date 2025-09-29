@@ -34,12 +34,6 @@ def parse_emails_to_graph(email_directory):
                                 addr.strip()
                                 for addr in line.split("To:")[1].split(", ")
                             ]
-                        elif line.startswith("Cc:"):
-                            cc_recipients = [
-                                addr.strip()
-                                for addr in line.split("Cc:")[1].split(", ")
-                            ]
-                            recipients.extend(cc_recipients)
                     if sender and recipients:
                         for recipient in recipients:
                             if G.graph_has_edge(sender, recipient):
@@ -57,6 +51,6 @@ def parse_emails_to_graph(email_directory):
 
 
 # TESTE
-if __name__ == "__main__":
-    email_dir = "dataset/AmostraEnron/"
-    email_graph = parse_emails_to_graph(email_dir)
+# if __name__ == "__main__":
+#     email_dir = "dataset/AmostraEnron/"
+#     email_graph = parse_emails_to_graph(email_dir)
