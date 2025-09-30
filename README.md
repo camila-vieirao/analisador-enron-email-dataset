@@ -8,20 +8,20 @@ O projeto aplica **teoria dos grafos** para extrair informações úteis da rede
 
 ---
 
-## ✅ Funcionalidades
+## ✅ CHECKLIST DE REQUISITOS
 
 ### Construção do Grafo
 
 * [X] Gerar um **grafo direcionado** a partir das mensagens, considerando remetente e destinatário(s).
 * [X] Tornar o grafo **ponderado** pela frequência de envio de mensagens.
-* [ ] Rotular o grafo com os **endereços de e-mail dos usuários**.
+* [x] Rotular o grafo com os **endereços de e-mail dos usuários**.
 
 ### Informações Gerais do Grafo
 
 * [X] Calcular o **número de vértices**.
 * [X] Calcular o **número de arestas**.
-* [ ] Identificar os **20 indivíduos com maior grau de saída** e seus valores.
-* [ ] Identificar os **20 indivíduos com maior grau de entrada** e seus valores.
+* [x] Identificar os **20 indivíduos com maior grau de saída** e seus valores.
+* [x] Identificar os **20 indivíduos com maior grau de entrada** e seus valores.
 
 ### Algoritmos de Busca
 
@@ -33,8 +33,8 @@ O projeto aplica **teoria dos grafos** para extrair informações úteis da rede
 * [ ] Implementar função que retorna os **nós a uma distância D** de um nó N.
 * [ ] Implementar método que calcula o **caminho crítico do fluxo de informação (maior custo acumulado)** entre dois indivíduos, adaptando o algoritmo de **Dijkstra** para considerar `1/peso`.
 
+### Observações
+
+* [ ] Todos os algoritmos devem **tratar ciclos** (evitar loops infinitos).
+
 ---
-
-## ⚠️ Observações
-
-* Todos os algoritmos devem **tratar ciclos** (evitar loops infinitos).

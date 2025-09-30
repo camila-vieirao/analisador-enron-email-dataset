@@ -25,16 +25,23 @@ def parse_emails_to_graph(email_directory):
                 with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                     lines = f.readlines()
                     sender = None
-                    recipients = []
+                    to_field = ""
+                    in_to = False
                     for line in lines:
                         if line.startswith("From:"):
+                            in_to = False
                             sender = line.split("From:")[1].strip()
                         elif line.startswith("To:"):
-                            recipients = [
-                                addr.strip()
-                                for addr in line.split("To:")[1].split(", ")
-                            ]
-                    if sender and recipients:
+                            in_to = True
+                            to_field = line.split("To:")[1].strip()
+                        elif in_to and (line.startswith(" ") or line.startswith("\t")):
+                            to_field += " " + line.strip()
+                        else:
+                            in_to = False
+                    if sender and to_field:
+                        recipients = [
+                            addr.strip() for addr in to_field.split(",") if addr.strip()
+                        ]
                         for recipient in recipients:
                             if G.graph_has_edge(sender, recipient):
                                 G.adj[sender][recipient]["weight"] += 1
@@ -51,6 +58,12 @@ def parse_emails_to_graph(email_directory):
 
 
 # TESTE
-# if __name__ == "__main__":
-#     email_dir = "dataset/AmostraEnron/"
-#     email_graph = parse_emails_to_graph(email_dir)
+if __name__ == "__main__":
+    email_dir = "dataset/AmostraEnron/"
+    email_graph = parse_emails_to_graph(email_dir)
+    # email_dir = "dataset/AmostraEnron/brawner-s/contract/"
+    # email_graph = parse_emails_to_graph(email_dir)
+
+    print(email_graph.graph_20_highest_out_degree())
+    print("----")
+    print(email_graph.graph_20_highest_in_degree())
