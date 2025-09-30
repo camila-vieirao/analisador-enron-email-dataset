@@ -25,8 +25,8 @@ O projeto aplica **teoria dos grafos** para extrair informações úteis da rede
 
 ### Algoritmos de Busca
 
-* [ ] Implementar **busca em profundidade (DFS)** para verificar se um indivíduo X alcança Y, mostrando o caminho percorrido.
-* [ ] Implementar **busca em largura (BFS)** para verificar se um indivíduo X alcança Y, mostrando o caminho percorrido.
+* [X] Implementar **busca em profundidade (DFS)** para verificar se um indivíduo X alcança Y, mostrando o caminho percorrido.
+* [X] Implementar **busca em largura (BFS)** para verificar se um indivíduo X alcança Y, mostrando o caminho percorrido.
 
 ### Distâncias e Caminhos
 

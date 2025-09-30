@@ -58,12 +58,12 @@ def parse_emails_to_graph(email_directory):
 
 
 # TESTE
-if __name__ == "__main__":
-    email_dir = "dataset/AmostraEnron/"
-    email_graph = parse_emails_to_graph(email_dir)
-    # email_dir = "dataset/AmostraEnron/brawner-s/contract/"
-    # email_graph = parse_emails_to_graph(email_dir)
-
-    print(email_graph.graph_20_highest_out_degree())
-    print("----")
-    print(email_graph.graph_20_highest_in_degree())
+# if __name__ == "__main__":
+#     #email_dir = "dataset/AmostraEnron/"
+#     #email_graph = parse_emails_to_graph(email_dir)
+#     email_dir = "dataset/AmostraEnron/brawner-s/contract/"
+#     email_graph = parse_emails_to_graph(email_dir)
+# 
+#     print(email_graph.graph_20_highest_out_degree())
+#     print("----")
+#     print(email_graph.graph_20_highest_in_degree())

@@ -32,3 +32,8 @@ class Graph:
                 in_degrees[neighbor] += 1
         sorted_in_degrees = sorted(in_degrees.items(), key=lambda x: x[1], reverse=True)
         return sorted_in_degrees[:20]
+    
+    def visit_neighbors(self, node):
+        if node in self.adj:
+            return list(self.adj[node].keys())
+        return []
