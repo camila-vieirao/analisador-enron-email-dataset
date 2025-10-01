@@ -1,5 +1,5 @@
 import os
-import graph
+from .graph import Graph
 
 
 def parse_emails_to_graph(email_directory):
@@ -14,7 +14,7 @@ def parse_emails_to_graph(email_directory):
     Returns:
     Graph: A directed graph representing email communications.
     """
-    G = graph.Graph()
+    G = Graph()
 
     try:
         print("Starting to parse emails...")

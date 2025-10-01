@@ -30,7 +30,7 @@ O projeto aplica **teoria dos grafos** para extrair informações úteis da rede
 
 ### Distâncias e Caminhos
 
-* [ ] Implementar função que retorna os **nós a uma distância D** de um nó N.
+* [X] Implementar função que retorna os **nós a uma distância D** de um nó N.
 * [ ] Implementar método que calcula o **caminho crítico do fluxo de informação (maior custo acumulado)** entre dois indivíduos, adaptando o algoritmo de **Dijkstra** para considerar `1/peso`.
 
 ### Observações

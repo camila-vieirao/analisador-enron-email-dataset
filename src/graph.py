@@ -37,3 +37,29 @@ class Graph:
         if node in self.adj:
             return list(self.adj[node].keys())
         return []
+
+    def all_neighbors_given_distance(self, node, distance):
+        if distance < 0:
+            return set()
+
+        frontier = [(node, 0)]  # (nó, distância)
+        explored = set([node])
+        exact_distance_nodes = set()
+
+        if distance == 0:
+            return {node}
+
+        while frontier:
+            current_node, current_distance = frontier.pop(0)  # BFS - FIFO
+
+            if current_distance < distance:
+                neighbors = self.visit_neighbors(current_node)
+                for neighbor in neighbors:
+                    if neighbor not in explored:
+                        explored.add(neighbor)
+                        new_distance = current_distance + 1
+                        frontier.append((neighbor, new_distance))
+                        if new_distance == distance:
+                            exact_distance_nodes.add(neighbor)
+
+        return exact_distance_nodes

@@ -1,4 +1,4 @@
-from graph import Graph
+from .graph import Graph
 
 class Search:
     def __init__(self, graph: Graph, start_node, end_node, frontier_type):
